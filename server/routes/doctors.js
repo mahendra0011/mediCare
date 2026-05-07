@@ -4,7 +4,7 @@ import { protect, adminOnly } from '../middleware/auth.js';
 
 const router = express.Router();
 
-router.get('/', protect, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { search, available, specialization, location } = req.query;
     const filter = {};

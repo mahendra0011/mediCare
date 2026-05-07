@@ -22,7 +22,7 @@ import uploadRoutes from './routes/upload.js';
 import emergencyRoutes from './routes/emergency.js';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/medicore';
 
 console.log('🔍 Environment check:', {
@@ -71,3 +71,4 @@ mongoose.connect(MONGO_URI)
     console.error('❌ MongoDB connection error:', err.message);
     process.exit(1);
   });
+
